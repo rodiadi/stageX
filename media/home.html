@@ -1,0 +1,11 @@
+<h2>Return Medicine: {{ sale.medicine.name }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Sold Quantity: {{ sale.quantity_sold }}</label><br>
+    <label>Quantity to Return:</label>
+    <input type="number" name="quantity_returned" min="1" max="{{ sale.quantity_sold }}" required><br>
+    <label>Reason:</label>
+    <input type="text" name="reason"><br>
+    <button type="submit">Submit Return</button>
+</form>

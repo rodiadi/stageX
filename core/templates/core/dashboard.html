@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}
+StageX Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- Hero -->
+    <div class="card border-0 shadow-sm mb-4 dashboard-hero">
+
+        <div class="card-body">
+
+            <h1 class="fw-bold">
+                Welcome to StageX
+            </h1>
+
+            <p class="text-muted mb-0">
+                Comprehensive Pathology Decision Support Platform
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Cancer Modules -->
+
+    <h4 class="mb-3">
+        🧬 Cancer Modules
+    </h4>
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+
+            <a href="{% url 'colon:home' %}" class="text-decoration-none">
+
+                <div class="card module-card h-100">
+
+                    <div class="card-body">
+
+                        <h1>🧬</h1>
+
+                        <h5>Colon Cancer</h5>
+
+                        <small class="text-muted">
+                            AJCC · WHO · CAP
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card module-card h-100">
+
+                <div class="card-body">
+
+                    <h1>🎀</h1>
+
+                    <h5>Breast Cancer</h5>
+
+                    <small class="text-muted">
+                        Coming Soon
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card module-card h-100">
+
+                <div class="card-body">
+
+                    <h1>🫁</h1>
+
+                    <h5>Lung Cancer</h5>
+
+                    <small class="text-muted">
+                        Coming Soon
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card module-card h-100">
+
+                <div class="card-body">
+
+                    <h1>👨</h1>
+
+                    <h5>Prostate</h5>
+
+                    <small class="text-muted">
+                        Coming Soon
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Quick Tools -->
+
+    <h4 class="mt-5 mb-3">
+
+        ⚡ Quick Tools
+
+    </h4>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+
+            <div class="card tool-card">
+
+                <div class="card-body">
+
+                    <h5>🧮 AJCC Calculator</h5>
+
+                    <p class="text-muted mb-0">
+
+                        TNM Staging Engine
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card tool-card">
+
+                <div class="card-body">
+
+                    <h5>📑 CAP Checklist</h5>
+
+                    <p class="text-muted mb-0">
+
+                        Synoptic Reports
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card tool-card">
+
+                <div class="card-body">
+
+                    <h5>🧬 Biomarkers</h5>
+
+                    <p class="text-muted mb-0">
+
+                        Molecular Pathology
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card tool-card">
+
+                <div class="card-body">
+
+                    <h5>📚 WHO</h5>
+
+                    <p class="text-muted mb-0">
+
+                        WHO Classification
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Latest -->
+
+    <h4 class="mt-5 mb-3">
+
+        📢 Latest Updates
+
+    </h4>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <ul class="mb-0">
+
+                <li>AJCC 8th Edition</li>
+
+                <li>WHO 5th Edition Classification</li>
+
+                <li>CAP Synoptic Protocols</li>
+
+                <li>NCCN Guidelines Integration (Planned)</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

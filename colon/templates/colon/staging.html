@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="container mt-5">
+
+
+<h1 class="mb-4">
+Colon Cancer AJCC 8th Edition TNM Staging
+</h1>
+
+
+
+<div class="card shadow p-4">
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+
+<!-- T CATEGORY -->
+
+<label class="form-label">
+Primary Tumor (T)
+</label>
+
+
+<select name="T" class="form-select mb-3">
+
+
+<option value="Tis">
+Tis - Carcinoma in situ
+</option>
+
+
+<option value="T1">
+T1 - Tumor invades submucosa
+</option>
+
+
+<option value="T2">
+T2 - Tumor invades muscularis propria
+</option>
+
+
+<option value="T3">
+T3 - Tumor through muscularis propria into pericolorectal tissues
+</option>
+
+
+<option value="T4a">
+T4a - Tumor penetrates visceral peritoneum
+</option>
+
+
+<option value="T4b">
+T4b - Tumor directly invades other organs/structures
+</option>
+
+
+</select>
+
+
+
+
+
+<!-- N CATEGORY -->
+
+
+<label class="form-label">
+Regional Lymph Nodes (N)
+</label>
+
+
+<select name="N" class="form-select mb-3">
+
+
+<option value="N0">
+N0 - No regional lymph node metastasis
+</option>
+
+
+<option value="N1a">
+N1a - 1 positive lymph node
+</option>
+
+
+<option value="N1b">
+N1b - 2-3 positive lymph nodes
+</option>
+
+
+<option value="N1c">
+N1c - Tumor deposits without positive nodes
+</option>
+
+
+<option value="N2a">
+N2a - 4-6 positive lymph nodes
+</option>
+
+
+<option value="N2b">
+N2b - ≥7 positive lymph nodes
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<!-- M CATEGORY -->
+
+
+<label class="form-label">
+Distant Metastasis (M)
+</label>
+
+
+<select name="M" class="form-select mb-3">
+
+
+<option value="M0">
+M0 - No distant metastasis identified
+</option>
+
+
+<option value="M1a">
+M1a - Metastasis to one distant site/organ
+</option>
+
+
+<option value="M1b">
+M1b - Metastasis to two or more distant sites/organs
+</option>
+
+
+<option value="M1c">
+M1c - Peritoneal surface metastasis
+</option>
+
+
+</select>
+
+
+
+
+
+
+<button 
+type="submit"
+class="btn btn-primary">
+
+Calculate Stage
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+{% if result %}
+
+
+
+<div class="card shadow mt-4 p-4">
+
+
+
+<h2>
+Final Stage
+</h2>
+
+
+
+<h1 class="text-success">
+
+{{ result.stage }}
+
+</h1>
+
+
+
+
+
+<h4>
+Explanation
+</h4>
+
+
+
+<p>
+
+{{ result.reason }}
+
+</p>
+
+
+
+</div>
+
+
+
+
+{% endif %}
+
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock %}
